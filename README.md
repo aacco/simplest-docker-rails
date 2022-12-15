@@ -13,3 +13,8 @@ And you finish:
 ```
 docker compose run web rake db:create
 ```
+
+## Exec ruby container
+```
+docker exec -it rb-web bash
+```
