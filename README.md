@@ -18,3 +18,15 @@ docker compose run web rake db:create
 ```
 docker exec -it rb-web bash
 ```
+
+# if you get ERRORs...
+## exec /usr/bin/entrypoint.sh: no such file or directory
+if you get
+```
+exec /usr/bin/entrypoint.sh: no such file or directory
+```
+when you exe:
+```
+docker compose run --no-deps web rails new .
+```
+make sure `entrypoint.sh` uses `LF`, not `CRLF`.
